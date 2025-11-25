@@ -82,9 +82,43 @@
     </div>
 </section>
 
+    <!-- Features -->
+    <!-- <section id="features" class="px-6 sm:px-10 py-20 bg-white relative" :style="scaledFontStyle">
+      <h3 class="text-3xl font-bold text-emerald-700 text-center mb-12">Why Seniors Love SeniorGo</h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 max-w-6xl mx-auto">
+        <div
+          v-for="card in features"
+          :key="card.title"
+          class="bg-gradient-to-br from-emerald-50 to-emerald-100 p-6 rounded-2xl shadow-xl text-center hover:scale-[1.02] transition-all duration-300"
+        >
+          <img :src="card.icon" :alt="card.alt" class="w-20 h-20 mx-auto mb-4" :class="card.anim"/>
+          <h4 class="font-semibold text-lg text-emerald-700">{{ card.title }}</h4>
+          <p class="text-sm text-gray-700 mt-2">{{ card.text }}</p>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="px-6 sm:px-10 py-20 bg-emerald-50 relative" :style="scaledFontStyle">
+      <h3 class="text-3xl font-bold text-emerald-700 text-center mb-12">What Seniors Are Saying</h3>
+
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 lg:gap-10">
+        <figure class="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-2xl transition">
+          <blockquote class="text-gray-700 italic text-lg">"I never thought I could apply for benefits on my own, but SeniorGo made it easy with just my voice."</blockquote>
+          <figcaption class="mt-4 font-semibold text-emerald-700">Lola Cita, Brgy. Ampayon</figcaption>
+        </figure>
+
+        <figure class="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-2xl transition">
+          <blockquote class="text-gray-700 italic text-lg">"Thanks to SeniorGo, I received my food support without needing to visit the barangay office."</blockquote>
+          <figcaption class="mt-4 font-semibold text-emerald-700">Tatay Juan, Brgy. Libertad</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-emerald-700 text-white text-center text-sm py-6">
-      &copy; 2026 SeniorGo · Made for Butuan Seniors 
+      &copy; 2025 SeniorGo · Made for Butuan Seniors | Powered by Barangay &amp; OSCA
     </footer>
   </div>
 </template>
@@ -108,7 +142,29 @@ const scaledFontStyle = computed(() => ({
   fontSize: `${fontScale.value}rem`
 }))
 
-
+const features = [
+  {
+    title: 'Voice Assistance',
+    text: 'Talk to your device to apply for benefits — no typing needed.',
+    icon: 'https://cdn-icons-png.flaticon.com/512/3063/3063829.png',
+    alt: 'Voice feature icon',
+    anim: 'animate-bounce motion-safe:animate-bounce motion-reduce:animate-none'
+  },
+  {
+    title: 'Face Verification',
+    text: 'Your face is your ID. Safe, secure, and fast application process.',
+    icon: 'https://cdn-icons-png.flaticon.com/512/4392/4392832.png',
+    alt: 'Face ID icon',
+    anim: 'animate-pulse motion-safe:animate-pulse motion-reduce:animate-none'
+  },
+  {
+    title: 'Simple Interface',
+    text: 'Large buttons, big text, and no clutter — made just for you.',
+    icon: 'https://cdn-icons-png.flaticon.com/512/2202/2202112.png',
+    alt: 'Accessible design icon',
+    anim: 'animate-wiggle motion-safe:animate-wiggle motion-reduce:animate-none'
+  }
+]
 </script>
 
 <style>
