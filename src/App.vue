@@ -1,11 +1,10 @@
 <script setup>
-import SupabaseTest from './components/SupabaseTest.vue'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
   <main style="padding: 1.5rem; font-family: system-ui, sans-serif">
-    <h1>Vue 3 + Supabase (Plain JS)</h1>
-    <SupabaseTest />
+    <RouterView />
   </main>
 </template>
 
